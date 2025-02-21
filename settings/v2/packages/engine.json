@@ -1,11 +1,8 @@
 {
-  "__version__": "1.0.5",
+  "__version__": "1.0.10",
   "modules": {
     "cache": {
       "base": {
-        "_value": true
-      },
-      "graphcis": {
         "_value": true
       },
       "gfx-webgl": {
@@ -69,16 +66,37 @@
       },
       "dragon-bones": {
         "_value": false
+      },
+      "animation": {
+        "_value": true
+      },
+      "skeletal-animation": {
+        "_value": true
+      },
+      "marionette": {
+        "_value": true
+      },
+      "graphics": {
+        "_value": true
+      },
+      "render-pipeline": {
+        "_option": "legacy-pipeline"
       }
     },
     "includeModules": [
+      "2d",
+      "animation",
       "base",
       "gfx-webgl",
-      "2d",
-      "ui",
+      "legacy-pipeline",
+      "light-probe",
+      "marionette",
       "physics-2d-box2d",
       "profiler",
-      "tween"
+      "skeletal-animation",
+      "tween",
+      "ui",
+      "websocket"
     ],
     "noDeprecatedFeatures": {
       "value": true,

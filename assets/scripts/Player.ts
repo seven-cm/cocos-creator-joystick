@@ -5,7 +5,7 @@ import {
   RigidBody2D,
   PhysicsSystem2D,
   EventTouch,
-  SystemEventType,
+  Input,
   misc,
   Vec3,
   Vec2,
@@ -69,9 +69,9 @@ export default class Player extends Component {
       this._body = this.node.getComponent(RigidBody2D);
     }
 
-    instance.on(SystemEventType.TOUCH_START, this.onTouchStart, this);
-    instance.on(SystemEventType.TOUCH_MOVE, this.onTouchMove, this);
-    instance.on(SystemEventType.TOUCH_END, this.onTouchEnd, this);
+    instance.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
+    instance.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
+    instance.on(Input.EventType.TOUCH_END, this.onTouchEnd, this);
   }
 
   onTouchStart() {}

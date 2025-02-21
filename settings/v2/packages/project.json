@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.1",
+  "__version__": "1.0.6",
   "layer": [
     {
       "name": "default",
@@ -9,6 +9,11 @@
   "general": {
     "designResolution": {
       "fitHeight": true
+    }
+  },
+  "fbx": {
+    "legacyFbxImporter": {
+      "visible": true
     }
   }
 }

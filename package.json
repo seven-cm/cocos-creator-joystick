@@ -29,5 +29,9 @@
   "bugs": {
     "url": "https://github.com/YunYouJun/cocos-creator-joystick/issues"
   },
-  "homepage": "https://github.com/YunYouJun/cocos-creator-joystick#readme"
+  "homepage": "https://github.com/YunYouJun/cocos-creator-joystick#readme",
+  "creator": {
+    "version": "3.8.4"
+  },
+  "uuid": "6fd3c3a9-5d3e-47cd-8909-502951cb6ab5"
 }
