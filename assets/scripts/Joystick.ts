@@ -182,8 +182,11 @@ export class Joystick extends Component {
 
     instance.emit(Input.EventType.TOUCH_START, event);
 
-    const location = event.getUILocation();
-    const touchPos = new Vec3(location.x, location.y);
+    const uiTransform = this.node.getComponent(UITransform);
+    const touchPos = uiTransform?.convertToNodeSpaceAR(
+      new Vec3(event.getUILocation().x, event.getUILocation().y)
+    );
+    if (!touchPos) return;
 
     if (this.joystickType === JoystickType.FIXED) {
       this._stickPos = this.ring.getPosition();
@@ -224,8 +227,12 @@ export class Joystick extends Component {
     }
 
     // 以圆圈为锚点获取触摸坐标
-    const location = event.getUILocation();
-    const touchPos = new Vec3(location.x, location.y);
+    const uiTransform = this.node.getComponent(UITransform);
+    const touchPos = uiTransform?.convertToNodeSpaceAR(
+      new Vec3(event.getUILocation().x, event.getUILocation().y)
+    );
+    if (!touchPos) return;
+
     // move vector
     const moveVec = touchPos.subtract(this.ring.getPosition());
     const distance = moveVec.length();
